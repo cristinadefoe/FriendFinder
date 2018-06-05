@@ -22,7 +22,7 @@ Then open your favorite browser and type "localhost: 8080". This will display th
 
 ![screen shot 2018-06-04 at 11 35 56 pm](https://user-images.githubusercontent.com/35505038/40956980-1d4500dc-6850-11e8-9fc6-1106b5fbf5f3.png)
 
-User can get to the survey page by clicking on the button.
+Clicking the button, takes the user to the survey page. 
 #### Screenshot
 
 ![screen shot 2018-06-04 at 11 38 31 pm](https://user-images.githubusercontent.com/35505038/40957022-6c20cefc-6850-11e8-9cbd-247d9d5e1250.png)
