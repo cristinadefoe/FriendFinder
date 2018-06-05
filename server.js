@@ -1,7 +1,6 @@
-// Require basic npm packages: `express`, `body-parser` and `path`.
+// Dependencies
 var bodyParser = require('body-parser');
 var express = require('express');
-var path = require('path');
 
 // Create express server
 var app = express();
@@ -9,25 +8,20 @@ var app = express();
 // PORT will work on local host 8080
 var PORT = process.env.PORT || 8080;
 
-// Create application/json parser
-var jsonParser = bodyParser.json()
-
-// Create application/x-www-form-urlencoded parser
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
+// Serve static files images, CSS and JavaScript in directory called public
+app.use(express.static('public'))
 
 // Standard bodyParser
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.urlencoded({ extended: true }));
 // parse application/json
-app.use(bodyParser.json({ type: 'application/**json' }))
-app.use(bodyParser.text({ type: 'text/html' }))
-app.use(bodyParser.raw({ type: 'application/vnd.custom-type' }))
+app.use(bodyParser.json());
 
 // Add apiRoutes file to server
 require('./app/routing/apiRoutes.js')(app);
 // add htmlRoutes file to server
 require('./app/routing/htmlRoutes.js')(app);
 
-// Check if server is running when running node server.js in command line
+// Check if server is listening
 app.listen(PORT, function () {
     console.log("FriendFinderApp listening on PORT: " + PORT);
 });

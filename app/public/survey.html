@@ -13,176 +13,337 @@
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
 
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <title>Survey Questions</title>
 </head>
 
 <body>
     <div class="container">
 
+        <!-- Survey questions form -->
         <h2>Survey Questions</h2>
         <hr>
-
         <h3>
-            <strong>About You</strong>
+            <strong>Tell me about yourself (ALL fields below are required)!</strong>
         </h3>
-
-        <h4>Name (Required)</h4>
+        <h4>Name:</h4>
         <input type="text" name="" id="name" class="form-control" required>
-        <hr>
-
-        <h4>Link to Photo Image (Required)</h4>
+        <br>
+        <br>
+        <h4>Link to photo:</h4>
         <input type="text" name="" id="photo" class="form-control" required>
         <hr>
 
-
+        <!-- Survey has 10 questions. Each answer should be on a scale of 1 to 5 based on how much the user agrees or disagrees with a question. -->
         <h3>
             <strong>Question 1:</strong>
         </h3>
-        <h4>Would you compromise your happiness for the success of the relationship?</h4>
-        <select data-placeholder="" class="chosen-select" id="question1"></select>
-        <option value=""></option>
-        <option value="1">1 Strongly Disagree</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 Strongly Agree</option>
+        <h4>Do you think having a positive mentor will help you grow in your job and personal life?</h4>
+        <select data-placeholder="" class="chosen-select" id="question1">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <hr>
 
         <h3>
             <strong>Question 2:</strong>
         </h3>
-        <h4>Would you ever say sorry to me even if it’s not your fault?</h4>
-        <select data-placeholder="" class="chosen-select" id="question2"></select>
-        <option value=""></option>
-        <option value="1">1 Strongly Disagree</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 Strongly Agree</option>
+        <h4>Do you value your career over spending time with family and friends?</h4>
+        <select data-placeholder="" class="chosen-select" id="question2">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <hr>
 
         <h3>
             <strong>Question 3:</strong>
         </h3>
-        <h4>Do you think past relationship secrets should always be kept hidden?</h4>
-        <select data-placeholder="" class="chosen-select" id="question3"></select>
-        <option value=""></option>
-        <option value="1">1 Strongly Disagree</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 Strongly Agree</option>
+        <h4>Happiness is more important than money.</h4>
+        <select data-placeholder="" class="chosen-select" id="question3">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <hr>
 
         <h3>
             <strong>Question 4</strong>
         </h3>
-        <h4>After a break up, would you ask for your gifts back/would you give back all the gifts?</h4>
-        <select data-placeholder="" class="chosen-select" id="question4"></select>
-        <option value=""></option>
-        <option value="1">1 Strongly Disagree</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 Strongly Agree</option>
+        <h4>Do you like learning new technologies?</h4>
+        <select data-placeholder="" class="chosen-select" id="question4">
+            <option value=""></option>
+            <option value="1">1 Strongly Disagree</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 Strongly Agree</option>
+        </select>
+        <hr>
 
         <h3>
             <strong>Question 5</strong>
         </h3>
-        <h4>Would you lie to make me happy and where would you draw the line?</h4>
-        <option value=""></option>
-        <option value="1">1 Strongly Disagree</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 Strongly Agree</option>
+        <h4>Do you support other women's views even if you don't agree?</h4>
+        <select data-placeholder="" class="chosen-select" id="question5">
+            <option value=""></option>
+            <option value="1">1 Strongly Disagree</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 Strongly Agree</option>
+        </select>
+        <hr>
 
         <h3>
             <strong>Question 6</strong>
         </h3>
-        <h4>If we went to a store to buy a couch and both of us liked different couches, would you still go with my pick?</h4>
-        <select data-placeholder="" class="chosen-select" id="question6"></select>
-        <option value=""></option>
-        <option value="1">1 Strongly Disagree</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 Strongly Agree</option>
+        <h4>If we went to a store to buy a painting and both of us liked different painting, would you still go with my pick?</h4>
+        <select data-placeholder="" class="chosen-select" id="question6">
+            <option value=""></option>
+            <option value="1">1 Strongly Disagree</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 Strongly Agree</option>
+        </select>
+        <hr>
 
         <h3>
             <strong>Question 7</strong>
         </h3>
-        <h4>Placeholder ques 1</h4>
-        <select data-placeholder="" class="chosen-select" id="question7"></select>
-        <option value=""></option>
-        <option value="1">1 Strongly Disagree</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 Strongly Agree</option>
+        <h4>Is working out regularly a must?</h4>
+        <select data-placeholder="" class="chosen-select" id="question7">
+            <option value=""></option>
+            <option value="1">1 Strongly Disagree</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 Strongly Agree</option>
+        </select>
+        <hr>
 
         <h3>
             <strong>Question 8</strong>
         </h3>
-        <h4>Placeholder ques 1</h4>
-        <select data-placeholder="" class="chosen-select" id="question8"></select>
-        <option value=""></option>
-        <option value="1">1 Strongly Disagree</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 Strongly Agree</option>
+        <h4>If you can get ahead in your career, by stepping in other women's toes would you do it?</h4>
+        <select data-placeholder="" class="chosen-select" id="question8">
+            <option value=""></option>
+            <option value="1">1 Strongly Disagree</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 Strongly Agree</option>
+        </select>
+        <hr>
 
         <h3>
             <strong>Question 9</strong>
         </h3>
-        <h4>Placeholder ques 1</h4>
-        <select data-placeholder="" class="chosen-select" id="question9"></select>
-        <option value=""></option>
-        <option value="1">1 Strongly Disagree</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 Strongly Agree</option>
+        <h4>Do you value connection and friendship with other like-minded women?</h4>
+        <select data-placeholder="" class="chosen-select" id="question9">
+            <option value=""></option>
+            <option value="1">1 Strongly Disagree</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 Strongly Agree</option>
+        </select>
+        <hr>
 
         <h3>
             <strong>Question 10</strong>
         </h3>
-        <h4>Placeholder ques 1</h4>
-        <select data-placeholder="" class="chosen-select" id="question10"></select>
-        <option value=""></option>
-        <option value="1">1 Strongly Disagree</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 Strongly Agree</option>
-
-        <br>
-        <br>
-
-        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
-            <i class="fa fa-check-circle" aria-hidden="true">
-                <</i>Submit</button>
+        <h4>Do you like to travel for fun?</h4>
+        <select data-placeholder="" class="chosen-select" id="question10">
+            <option value=""></option>
+            <option value="1">1 Strongly Disagree</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 Strongly Agree</option>
+        </select>
         <hr>
 
+        <br>
+        <br>
+
+        <!-- Button to take user to their matched friend -->
+        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
+            <i class="fa fa-check-circle" aria-hidden="true">
+            </i>Yay, find my tribe</button>
+        <hr>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Found your new tribe!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="friendName"></p>
+                    <img id="friendImage" src="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer class="footer">
         <div class="container">
             <p>
-                //TO DO: replace: /tables"
-                <a href="/api/tables">API Friends List</a> |
-                <a href="https://github.com/cristinadefoe/Hot-Restaurant">GitHub Repo</a>
+                <a href="/api/friends">API Friends List</a> |
+                <a href="https://github.com/cristinadefoe/FriendFinder" target="_blank">GitHub Repo</a>
             </p>
         </div>
     </footer>
 
     </div>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <!-- Popper.js, then Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#submit").on("click", function () {
+                // Check if form is valid
+                function validateForm() {
+                    var formValid = true;
+                    $('.validate').each(function () {
+                        if ($(this).val() === '') {
+                            formValid = false;
+                        }
+                    });
+                    $('.browser-default').each(function () {
+                        if ($(this).val() === "") {
+                            formValid = false;
+                        }
+                    });
+                    return formValid;
+                }
+
+                // Check if form is done
+                if (validateForm() == true) {
+                    // Add new friend
+                    var newFriend = {
+                        name: $('#name').val().trim(),
+                        photo: $('#photo').val().trim(),
+                        scores: [
+                            $('#question1').val(),
+                            $('#question2').val(),
+                            $('#question3').val(),
+                            $('#question4').val(),
+                            $('#question5').val(),
+                            $('#question6').val(),
+                            $('#question7').val(),
+                            $('#question8').val(),
+                            $('#question9').val(),
+                            $('#question10').val(),
+                        ]
+                    };
+
+                    var currentURL = window.location.origin;
+
+                    // data = response.json from apiRoutes.js
+                    $.post(currentURL + "/api/friends", newFriend, function (data) {
+                        $("#friendName").text(data.sameName);
+                        $("#friendImage").attr("src", data.samePicture);
+                    });
+
+                    $('.modal').modal();
+                    $('#name').val("");
+                    $('#photo').val("");
+                    $('#question1').val("");
+                    $('#question2').val("");
+                    $('#question3').val("");
+                    $('#question4').val("");
+                    $('#question5').val("");
+                    $('#question6').val("");
+                    $('#question7').val("");
+                    $('#question8').val("");
+                    $('#question9').val("");
+                    $('#question10').val("");
+
+                } else {
+
+                    alert("Sorry, can't find your match. ALL the questions needs to be filled out. Try again!")
+                }
+
+            });
+        });
+
+    </script>
+
 </body>
 
 </html>
+
+<!-- CSS -->
+<style>
+    .container {
+        color: #114B5F;
+    }
+
+    hr.light {
+        border-color: #fff;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .btn {
+        font-weight: 700;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 300px;
+        font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    .btn-xl {
+        padding: 1rem 2rem;
+    }
+
+    .btn-primary {
+        background-color: #456990;
+        border-color: #456990;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active {
+        color: #fff;
+        background-color: #F45B69 !important;
+    }
+
+    .btn-primary:active,
+    .btn-primary:focus {
+        box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
+    }
+</style>

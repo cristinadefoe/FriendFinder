@@ -1,23 +1,50 @@
-var friendsData = require('../data/friends.js');
+var friendData = require('../data/friends.js');
 var path = require('path');
 
 module.exports = function (app) {
 
-    // Your`apiRoutes.js` file should contain two routes:
-
+    // `apiRoutes.js` file should contain two routes:
     // GET route with the url`/api/friends`. This will be used to display a JSON of all possible friends.
     app.get('/api/friends', function (req, res) {
         // Display friends data in json format
-        res.json(friendsData);
+        res.json(friendData);
     });
 
-    // A POST routes`/api/friends`.This will be used to handle incoming survey results.
-    // This route will also be used to handle the compatibility logic. 
     app.post('/api/friends', function (req, res) {
-        if (friendsData.length < 5) {
-            res.json(true);
+        // Check newFriendPoints and compare it to friendData 
+        var userInput = req.body;
+        var newFriendPoints = userInput.scores;
+        var sameName = '';
+        var samePicture = '';
+        var friendGap = 5000;
 
-            app.use(function (req, res) {
-                res.sendFile(path.join(__dirname + '/../public/home.html'));
-            });
+        // Loop through friends list
+        for (var i = 0; i < friendData.length; i++) {
+            // Check gap in points to compare friends in list
+            var gap = 0;
+            for (var j = 0; j < newFriendPoints.length; j++) {
+                gap += (Math.abs(parseInt(friendData[i].scores[j]) - parseInt(userInput.scores[j])));
+            }
+
+            // If difference in score is low, then a match is found
+            if (gap < friendGap) {
+                console.log('Found your tribe = ' + gap);
+                console.log('Friend name = ' + friendData[i].name);
+                console.log('Friend image = ' + friendData[i].photo);
+
+                // Create new friend
+                friendGap = gap;
+                sameName = friendData[i].name;
+                samePicture = friendData[i].photo;
+            }
         }
+
+        // Add new user
+        friendData.push(userInput);
+        // Sending object sameName and samePicture to backend
+        // Sending response back to survey.html
+        res.json({ sameName: sameName, samePicture: samePicture });
+    });
+
+};
+

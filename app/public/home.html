@@ -13,51 +13,113 @@
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
 
-    <title>Friend Finder</title>
+    <title>Find my Tribe</title>
 </head>
 
 <body>
+
     <div class="container">
 
         <div class="jumbotron">
-            <h1 class="text-center">
-
-                //TO DO: replace: glyphicon glyphicon-fire"
-                <span class="glyphicon glyphicon-fire"></span> Friend Finder </h1>
-            <hr>
-            <h2 class="text-center">Answer a few basic questions. </h2>
-            <h2 class="text-center">Then find the friend with the greatest compatibility. </h2>
-            <br>
-
-            <div class="">
-                <a href="/survey">
-                    <button type="button" class="btn btn-lg btn-primary">
-                        <h4>
-                            <span class="glyphicon glyphicon-list-alt"></span> Go to Survey </h4>
-                    </button>
-                </a>
-            </div>
+            <!-- Header for main page -->
+            <header class="masthead text-center text-white d-flex">
+                <div class="container my-auto">
+                    <div class="row">
+                        <div class="col-lg-12 mx-auto">
+                            <h1 class="text-uppercase">
+                                <strong>Find my Tribe</strong>
+                            </h1>
+                            <hr>
+                            <h3 class="text-center">Tell me what moves you.</h3>
+                            <h4 class="text-center">Then get connected with fearless and inspiring women who share similar interests. </h4>
+                            <h5 class="text-center">Created for women who believes in collaboration over competition.</h5>
+                            <br>
+                        </div>
+                        <!-- Button to take user to survey page -->
+                        <div class="col-lg-5 mx-auto">
+                            <p class="text-faded mb-5"> </p>
+                            <a class="btn btn-primary btn-xl js-scroll-trigger" href="/survey">Take me to the survey!</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
 
         </div>
 
         <footer class="footer">
             <div class="container">
                 <p>
-                    <a href="/api/survey">API Friends List</a>
-                    <a href="https://github.com/cristinadefoe/Hot-Restaurant">GitHub Repo</a>
+                    <a href="/api/friends">API Friends List</a> |
+                    <a href="https://github.com/cristinadefoe/FriendFinder" target="_blank">GitHub Repo</a>
                 </p>
             </div>
         </footer>
 
     </div>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <!-- Popper.js, then Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
+
 </body>
 
 </html>
+
+<!-- CSS -->
+<style>
+    .container {
+        color: #114B5F;
+    }
+
+    hr {
+        max-width: 50px;
+        border-width: 3px;
+        border-color: #E4FDE1;
+    }
+
+    hr.light {
+        border-color: #fff;
+    }
+
+    header.masthead {
+        padding-top: 10rem;
+        padding-bottom: calc(10rem - 56px);
+        background-image: url("../public/1.jpg");
+        background-position: center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    .btn {
+        font-weight: 700;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 300px;
+        font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    .btn-xl {
+        padding: 1rem 2rem;
+    }
+
+    .btn-primary {
+        background-color: #456990;
+        border-color: #456990;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active {
+        color: #fff;
+        background-color: #F45B69 !important;
+    }
+
+    .btn-primary:active,
+    .btn-primary:focus {
+        box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
+    }
+</style>
