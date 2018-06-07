@@ -1,8 +1,13 @@
 # Friend Finder: Node and Express Servers Homework #11
 
+<<<<<<< HEAD
 This application matches friends with similar interests. Using a full-stack site hosted by Heroku, the user fills out a survey with ten questions. The application compares the data collected from new user's survey vs. current friends array. Then it displays the name and picture of the person their most compatible with.
+=======
+This application matches friends with similar interests. Using a full-stack site hosted by Heroku, the user fills out a survey with ten questions. The application compares the data collected from the new user's survey vs. current friends array. Then it displays the name and picture of the person their most compatible with.
+>>>>>>> 3ad3b2e991a04ee0191b4d56494945c28e943d4b
 
 ## Getting Started
+
 ### NPM Installations
 
 Navigate to server.js file and run the following command lines in the terminal:
@@ -10,33 +15,58 @@ Navigate to server.js file and run the following command lines in the terminal:
 - `npm install express`
 - `npm install body-parse`
 - `npm install path`
+
 ### Deployment 
 
+<<<<<<< HEAD
 * To check if the server is listening, navigate to the root of the project. In the terminal command line, run `node server.js`. This will display a message "FriendFinderApp Listening on PORT: 8080.
+=======
+To check if the server is listening, navigate to the root of the project. In the terminal command line, run `node server.js`. This will display a message "FriendFinderApp Listening on PORT: 8080.
+
+>>>>>>> 3ad3b2e991a04ee0191b4d56494945c28e943d4b
 #### Screenshot
 
 ![screen shot 2018-06-04 at 10 17 06 pm](https://user-images.githubusercontent.com/35505038/40955290-593d4d24-6846-11e8-89b0-828057424cb8.png)
 
+<<<<<<< HEAD
 * Then open your browser and type "localhost: 8080". This will display the home page and allow you to navigate through the site. 
 
 * Alternatively, you can go directly to site by pasting the following link in your browser (hosted by Heroku): https://arcane-lake-35500.herokuapp.com.
+=======
+Then open your browser and type "localhost: 8080". This will display the home page and allow you to navigate through the site. 
+
+An easier option, to see the site in action is by using the following link (hosted by Heroku): https://arcane-lake-35500.herokuapp.com.
+>>>>>>> 3ad3b2e991a04ee0191b4d56494945c28e943d4b
 
 #### Screenshot
 
 ![screen shot 2018-06-04 at 11 35 56 pm](https://user-images.githubusercontent.com/35505038/40956980-1d4500dc-6850-11e8-9fc6-1106b5fbf5f3.png)
 
+<<<<<<< HEAD
 * Clicking on "Take me to the Survey!" button, takes the user to the survey page. 
+=======
+Clicking the button, takes the user to the survey page.
+
+>>>>>>> 3ad3b2e991a04ee0191b4d56494945c28e943d4b
 #### Screenshot
 
 ![screen shot 2018-06-04 at 11 38 31 pm](https://user-images.githubusercontent.com/35505038/40957022-6c20cefc-6850-11e8-9cbd-247d9d5e1250.png)
 
+<<<<<<< HEAD
 * The user must fill out ALL the fields in the survey and click "Yay, find my tribe" button. The application will output the user's best match including the name and picture of the person and then add the new user's information in the current friends' list.
+=======
+The user must fill out ALL the fields in the survey and click the button. The application will output the user's best match and add the new user's information in the friends array.
+>>>>>>> 3ad3b2e991a04ee0191b4d56494945c28e943d4b
 
 #### Screenshot
 
 ![screen shot 2018-06-05 at 12 31 33 am](https://user-images.githubusercontent.com/35505038/40962159-f6e27a98-6861-11e8-91e2-024ed0aadc6b.png)
 
+<<<<<<< HEAD
 * In the footer section, clicking on "API Friends List" will provide the current friends array data.
+=======
+In the footer section, clicking on "API Friends List" will provide the current friends array data.
+>>>>>>> 3ad3b2e991a04ee0191b4d56494945c28e943d4b
 
 #### Screenshot
 
