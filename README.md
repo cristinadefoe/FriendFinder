@@ -12,31 +12,31 @@ Navigate to server.js file and run the following command lines in the terminal:
 - `npm install path`
 ### Deployment 
 
-To check if the server is listening, navigate to the root of the project. In the terminal command line, run `node server.js`. This will display a message "FriendFinderApp Listening on PORT: 8080.
+* To check if the server is listening, navigate to the root of the project. In the terminal command line, run `node server.js`. This will display a message "FriendFinderApp Listening on PORT: 8080.
 #### Screenshot
 
 ![screen shot 2018-06-04 at 10 17 06 pm](https://user-images.githubusercontent.com/35505038/40955290-593d4d24-6846-11e8-89b0-828057424cb8.png)
 
-Then open your browser and type "localhost: 8080". This will display the home page and allow you to navigate through the site. 
+* Then open your browser and type "localhost: 8080". This will display the home page and allow you to navigate through the site. 
 
-An easier option to see the site in action is by using the following link (hosted by Heroku): https://arcane-lake-35500.herokuapp.com.
+* Alternatively, you can go directly to site by pasting the following link in your browser (hosted by Heroku): https://arcane-lake-35500.herokuapp.com.
 
 #### Screenshot
 
 ![screen shot 2018-06-04 at 11 35 56 pm](https://user-images.githubusercontent.com/35505038/40956980-1d4500dc-6850-11e8-9fc6-1106b5fbf5f3.png)
 
-Clicking the button, takes the user to the survey page. 
+* Clicking on "Take me to the Survey!" button, takes the user to the survey page. 
 #### Screenshot
 
 ![screen shot 2018-06-04 at 11 38 31 pm](https://user-images.githubusercontent.com/35505038/40957022-6c20cefc-6850-11e8-9cbd-247d9d5e1250.png)
 
-The user must fill out ALL the fields in the survey and click the button. The application will output the user's best match and add the new user's information in the friends array.
+* The user must fill out ALL the fields in the survey and click "Yay, find my tribe" button. The application will output the user's best match including the name and picture of the person and then add the new user's information in the current friends' list.
 
 #### Screenshot
 
 ![screen shot 2018-06-05 at 12 31 33 am](https://user-images.githubusercontent.com/35505038/40962159-f6e27a98-6861-11e8-91e2-024ed0aadc6b.png)
 
-In the footer section, clicking on "API Friends List" will provide the current friends array data.
+* In the footer section, clicking on "API Friends List" will provide the current friends array data.
 
 #### Screenshot
 
