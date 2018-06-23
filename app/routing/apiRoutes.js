@@ -1,5 +1,4 @@
 var friendData = require('../data/friends.js');
-var path = require('path');
 
 module.exports = function (app) {
 
@@ -11,7 +10,6 @@ module.exports = function (app) {
     });
 
     app.post('/api/friends', function (req, res) {
-        // Check newFriendPoints and compare it to friendData 
         var userInput = req.body;
         var newFriendPoints = userInput.scores;
         var sameName = '';
@@ -47,4 +45,3 @@ module.exports = function (app) {
     });
 
 };
-

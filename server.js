@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 
 // Add apiRoutes file to server
 require('./app/routing/apiRoutes.js')(app);
-// add htmlRoutes file to server
+// Add htmlRoutes file to server
 require('./app/routing/htmlRoutes.js')(app);
 
 // Check if server is listening

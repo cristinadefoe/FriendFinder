@@ -6,14 +6,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-        crossorigin="anonymous">
-
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-
-    <!-- jQuery CDN -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
     <title>Survey Questions</title>
 </head>
@@ -40,7 +36,7 @@
             <strong>Question 1:</strong>
         </h3>
         <h4>Do you think having a positive mentor will help you grow in your job and personal life?</h4>
-        <select data-placeholder="" class="chosen-select" id="question1">
+        <select data-placeholder="" class="form-control" id="question1">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -54,7 +50,7 @@
             <strong>Question 2:</strong>
         </h3>
         <h4>Do you value your career over spending time with family and friends?</h4>
-        <select data-placeholder="" class="chosen-select" id="question2">
+        <select data-placeholder="" class="form-control" id="question2">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -68,7 +64,7 @@
             <strong>Question 3:</strong>
         </h3>
         <h4>Happiness is more important than money.</h4>
-        <select data-placeholder="" class="chosen-select" id="question3">
+        <select data-placeholder="" class="form-control" id="question3">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -82,7 +78,7 @@
             <strong>Question 4</strong>
         </h3>
         <h4>Do you like learning new technologies?</h4>
-        <select data-placeholder="" class="chosen-select" id="question4">
+        <select data-placeholder="" class="form-control" id="question4">
             <option value=""></option>
             <option value="1">1 Strongly Disagree</option>
             <option value="2">2</option>
@@ -96,7 +92,7 @@
             <strong>Question 5</strong>
         </h3>
         <h4>Do you support other women's views even if you don't agree?</h4>
-        <select data-placeholder="" class="chosen-select" id="question5">
+        <select data-placeholder="" class="form-control" id="question5">
             <option value=""></option>
             <option value="1">1 Strongly Disagree</option>
             <option value="2">2</option>
@@ -110,7 +106,7 @@
             <strong>Question 6</strong>
         </h3>
         <h4>If we went to a store to buy a painting and both of us liked different painting, would you still go with my pick?</h4>
-        <select data-placeholder="" class="chosen-select" id="question6">
+        <select data-placeholder="" class="form-control" id="question6">
             <option value=""></option>
             <option value="1">1 Strongly Disagree</option>
             <option value="2">2</option>
@@ -124,7 +120,7 @@
             <strong>Question 7</strong>
         </h3>
         <h4>Is working out regularly a must?</h4>
-        <select data-placeholder="" class="chosen-select" id="question7">
+        <select data-placeholder="" class="form-control" id="question7">
             <option value=""></option>
             <option value="1">1 Strongly Disagree</option>
             <option value="2">2</option>
@@ -138,7 +134,7 @@
             <strong>Question 8</strong>
         </h3>
         <h4>If you can get ahead in your career, by stepping in other women's toes would you do it?</h4>
-        <select data-placeholder="" class="chosen-select" id="question8">
+        <select data-placeholder="" class="form-control" id="question8">
             <option value=""></option>
             <option value="1">1 Strongly Disagree</option>
             <option value="2">2</option>
@@ -152,7 +148,7 @@
             <strong>Question 9</strong>
         </h3>
         <h4>Do you value connection and friendship with other like-minded women?</h4>
-        <select data-placeholder="" class="chosen-select" id="question9">
+        <select data-placeholder="" class="form-control" id="question9">
             <option value=""></option>
             <option value="1">1 Strongly Disagree</option>
             <option value="2">2</option>
@@ -166,7 +162,7 @@
             <strong>Question 10</strong>
         </h3>
         <h4>Do you like to travel for fun?</h4>
-        <select data-placeholder="" class="chosen-select" id="question10">
+        <select data-placeholder="" class="form-control" id="question10">
             <option value=""></option>
             <option value="1">1 Strongly Disagree</option>
             <option value="2">2</option>
@@ -188,7 +184,7 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div id="modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -198,12 +194,11 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p id="friendName"></p>
+                    <h2 id="friendName"></h2>
                     <img id="friendImage" src="">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
@@ -220,53 +215,42 @@
 
     </div>
 
-    <!-- Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-        crossorigin="anonymous"></script>
-
-
     <script type="text/javascript">
 
         $(document).ready(function () {
             $("#submit").on("click", function () {
+
                 // Check if form is valid
                 function validateForm() {
-                    var formValid = true;
-                    $('.validate').each(function () {
-                        if ($(this).val() === '') {
-                            formValid = false;
-                        }
+                    var isValid = true;
+                    $('.form-control').each(function () {
+                        if ($(this).val() === '')
+                            isValid = false;
                     });
-                    $('.browser-default').each(function () {
-                        if ($(this).val() === "") {
-                            formValid = false;
-                        }
-                    });
-                    return formValid;
+
+                    return isValid;
                 }
 
                 // Check if form is done
                 if (validateForm() == true) {
+
                     // Add new friend
                     var newFriend = {
                         name: $('#name').val().trim(),
                         photo: $('#photo').val().trim(),
-                        scores: [
-                            $('#question1').val(),
-                            $('#question2').val(),
-                            $('#question3').val(),
-                            $('#question4').val(),
-                            $('#question5').val(),
-                            $('#question6').val(),
-                            $('#question7').val(),
-                            $('#question8').val(),
-                            $('#question9').val(),
-                            $('#question10').val(),
-                        ]
+                        scores:
+                            [
+                                $('#question1').val(),
+                                $('#question2').val(),
+                                $('#question3').val(),
+                                $('#question4').val(),
+                                $('#question5').val(),
+                                $('#question6').val(),
+                                $('#question7').val(),
+                                $('#question8').val(),
+                                $('#question9').val(),
+                                $('#question10').val(),
+                            ]
                     };
 
                     var currentURL = window.location.origin;
@@ -275,6 +259,7 @@
                     $.post(currentURL + "/api/friends", newFriend, function (data) {
                         $("#friendName").text(data.sameName);
                         $("#friendImage").attr("src", data.samePicture);
+                        $('#modal').modal("toggle");
                     });
 
                     $('.modal').modal();
@@ -292,13 +277,10 @@
                     $('#question10').val("");
 
                 } else {
-
-                    alert("Sorry, can't find your match. ALL the questions needs to be filled out. Try again!")
+                    alert("Sorry, can't find your match. ALL the questions needs to be filled out. Try again!");
                 }
-
             });
         });
-
     </script>
 
 </body>
@@ -307,6 +289,10 @@
 
 <!-- CSS -->
 <style>
+    #friendImage {
+        max-width: 90%;
+    }
+
     .container {
         color: #114B5F;
     }
