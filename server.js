@@ -17,9 +17,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Add apiRoutes file to server
-require('./app/routing/apiRoutes.js')(app);
+require('./routing/apiRoutes.js')(app);
 // Add htmlRoutes file to server
-require('./app/routing/htmlRoutes.js')(app);
+require('./routing/htmlRoutes.js')(app);
 
 // Check if server is listening
 app.listen(PORT, function () {
