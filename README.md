@@ -1,4 +1,4 @@
-# Friend Finder: Node and Express Servers Homework #11
+# Friend Finder
 
 This application matches friends with similar interests. Using a full-stack site hosted by Heroku, the user fills out a survey with ten questions. The application compares the data collected from new user's survey vs. current friends array. Then it displays the name and picture of the person their most compatible with.
 
